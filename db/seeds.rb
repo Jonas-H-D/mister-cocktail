@@ -16,7 +16,8 @@
 # Ingredient.create(name: "orange pill")
 # Ingredient.create(name: "coconut milk")
 # Ingredient.create(name: "pinapple juice")
-
+puts "cleaning database"
+Cocktail.destroy_all
 puts "creating a list of cocktails"
 Cocktail.create(name: 'The White Russian', rating: 3)
 Cocktail.create(name: 'The Irish Coffee', rating: 3)
