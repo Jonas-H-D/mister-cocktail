@@ -1,0 +1,22 @@
+<h1><%= @cocktail.name %> </h1>
+  <% if @cocktail.rating == 1 %>
+  <%= '*' %>
+  <% elsif @cocktail.rating == 2 %>
+  <%= '**' %>
+  <% elsif @cocktail.rating == 3 %>
+  <%= '***' %>
+  <% elsif @cocktail.rating == 4 %>
+  <%= '****' %>
+  <% else @cocktail.rating == 5 %>
+  <%= '*****' %>
+  <% end %> </h2>
+<br>
+
+  <%= link_to "Back to list /", cocktails_path %>
+  <%= link_to "delete /",
+  cocktails_path(@cocktail),
+  method: :delete,
+  data: { confirm: "are you sure?"} %>
+
+  <%= link_to "edit",
+  edit_cocktail_path(@cocktail) %>

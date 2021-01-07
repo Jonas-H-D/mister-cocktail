@@ -1,0 +1,8 @@
+<%= form_for @cocktail do |f| %>
+  <%= f.label :name, "enter a name" %>
+  <%= f.text_field :name %>
+  <%= f.label :rating, "enter rating" %>
+  <%= f.number_field :rating  %>
+
+  <%= f.submit %>
+  <% end %>

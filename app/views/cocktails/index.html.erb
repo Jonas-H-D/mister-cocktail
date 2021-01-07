@@ -1,0 +1,28 @@
+<h1>All Cocktails</h1>
+
+<%= link_to "Add a new Cocktail", new_cocktail_path  %>
+
+<% @cocktails.each do |cocktail| %>
+  <h2> <%= cocktail.name %>
+  <% if cocktail.rating == 1 %>
+  <%= '*' %>
+  <% elsif cocktail.rating == 2 %>
+  <%= '**' %>
+  <% elsif cocktail.rating == 3 %>
+  <%= '***' %>
+  <% elsif cocktail.rating == 4 %>
+  <%= '****' %>
+  <% else cocktail.rating == 5 %>
+  <%= '*****' %>
+  <% end %> </h2>
+
+  <%= link_to "See more /", cocktail_path(cocktail) %>
+
+  <%= link_to "delete /",
+  cocktail_path(cocktail),
+  method: :delete %>
+
+  <%= link_to "edit",
+  edit_cocktail_path(cocktail) %>
+
+<% end %>
