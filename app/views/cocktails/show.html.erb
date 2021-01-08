@@ -1,22 +1,30 @@
 <h1><%= @cocktail.name %> </h1>
-  <% if @cocktail.rating == 1 %>
-  <%= '*' %>
-  <% elsif @cocktail.rating == 2 %>
-  <%= '**' %>
-  <% elsif @cocktail.rating == 3 %>
-  <%= '***' %>
-  <% elsif @cocktail.rating == 4 %>
-  <%= '****' %>
-  <% else @cocktail.rating == 5 %>
-  <%= '*****' %>
-  <% end %> </h2>
+<br>
+<table class="table">
+        <tbody>
+          <thead>
+            <th>Ingredient</th>
+            <th>Description</th>
+            <th>Action</th>
+          </thead>
+  <h1><% @cocktail.doses.each do |dose| %> </h1>
+  <tr>
+  <td><%= dose.description %></td>
+  <td><%= dose.ingredient.name %></td>
+  <td><%= dose.process %></td>
+  </tr>
+  <% end %>
+</table>
 <br>
 
   <%= link_to "Back to list /", cocktails_path %>
   <%= link_to "delete /",
-  cocktails_path(@cocktail),
-  method: :delete,
-  data: { confirm: "are you sure?"} %>
-
-  <%= link_to "edit",
+    cocktails_path(@cocktail),
+    method: :delete,
+    data: { confirm: "are you sure?"} %>
+  <%= link_to "edit /",
   edit_cocktail_path(@cocktail) %>
+  <%= link_to "Create Dose",  new_cocktail_dose_path(@cocktail) %>
+
+
+
