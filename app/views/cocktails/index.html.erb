@@ -1,22 +1,17 @@
 <h1>All Cocktails</h1>
 
 <%= link_to "Add a new Cocktail /", new_cocktail_path  %>
-<%= link_to "Best Cocktails", top_cocktails_path  %>
+<%= link_to "Best Cocktails", top_reviews_path  %>
 <br>
 <% @cocktails.each do |cocktail| %>
   <%= cocktail.name %>
 <br>
   <%= link_to "See more /", cocktail_path(cocktail) %>
-
   <%= link_to "delete /",
   cocktail_path(cocktail),
   method: :delete %>
-
   <%= link_to "edit",
   edit_cocktail_path(cocktail) %>
 <br>
 <% end %>
 
-<% @ingredients.each do |ingredient| %>
-  <%= ingredient.name %> /
-<% end %>

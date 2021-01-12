@@ -1,10 +1,14 @@
+<div class="container">
 <h1><%= @cocktail.name %> </h1>
+<% @cocktail.reviews.each do |review| %>
+    <h3><%= review.rating %>/5</h1>
+<% end %>
 <br>
 <table class="table">
         <tbody>
           <thead>
+            <th>Doses</th>
             <th>Ingredient</th>
-            <th>Description</th>
             <th>Action</th>
           </thead>
   <h1><% @cocktail.doses.each do |dose| %> </h1>
@@ -16,15 +20,27 @@
   <% end %>
 </table>
 <br>
-
   <%= link_to "Back to list /", cocktails_path %>
+  <%= link_to 'Leave a review', new_cocktail_review_path(@cocktail) %>
+  <br>
   <%= link_to "delete /",
-    cocktails_path(@cocktail),
+  cocktail_path(@cocktail),
+  method: :delete %>
+  <%= link_to "edit name/",
+  edit_cocktail_path(@cocktail) %>
+  <%= link_to "edit Recipe",  new_cocktail_dose_path(@cocktail) %>
+  <br>
+
+  <h3>Reviews</h3>
+  <% @cocktail.reviews.each do |review| %>
+    <p><%= review.content %></p>
+  <%= link_to "delete",
+      review_path(review),
     method: :delete,
     data: { confirm: "are you sure?"} %>
-  <%= link_to "edit /",
-  edit_cocktail_path(@cocktail) %>
-  <%= link_to "Create Dose",  new_cocktail_dose_path(@cocktail) %>
+  <% end %>
+</ul>
+<br>
 
-
+</div>
 
