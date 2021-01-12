@@ -5,6 +5,7 @@
 <br>
 <% @cocktails.each do |cocktail| %>
   <%= cocktail.name %>
+  <%= cocktail.reviews.average(:rating) %>
 <br>
   <%= link_to "See more /", cocktail_path(cocktail) %>
   <%= link_to "delete /",
