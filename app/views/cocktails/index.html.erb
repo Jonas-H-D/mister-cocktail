@@ -1,18 +1,18 @@
+<div class="container">
 <h1>All Cocktails</h1>
 
 <%= link_to "Add a new Cocktail /", new_cocktail_path  %>
 <%= link_to "Best Cocktails", top_reviews_path  %>
 <br>
 <% @cocktails.each do |cocktail| %>
-  <%= cocktail.name %>
+  <h1> <%= cocktail.name %> </h1>
   <%= cocktail.reviews.average(:rating) %>
 <br>
-  <%= link_to "See more /", cocktail_path(cocktail) %>
-  <%= link_to "delete /",
+  <%= link_to "See more", cocktail_path(cocktail), class: "btn btn-primary" %>
+  <%= link_to "delete",
   cocktail_path(cocktail),
-  method: :delete %>
-  <%= link_to "edit",
-  edit_cocktail_path(cocktail) %>
+  method: :delete, class: "btn btn-success" %>
 <br>
 <% end %>
-
+<br>
+</div>

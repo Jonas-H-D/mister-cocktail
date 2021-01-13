@@ -3,20 +3,15 @@
 <%= @cocktail.reviews.average(:rating) %>
 <br>
 <table class="table">
-        <tbody>
-          <thead>
-            <th>Doses</th>
-            <th>Ingredient</th>
-            <th>Action</th>
-          </thead>
-  <h1><% @cocktail.doses.each do |dose| %> </h1>
-  <tr>
-  <td><%= dose.description %></td>
-  <td><%= dose.ingredient %></td>
-  <td><%= dose.process %></td>
-  </tr>
-  <% end %>
+  <tbody>
+    <thead>
+      <th>Ingredients</th>
+    <h1><% @cocktail.doses.each do |dose| %> </h1>
+      <td><%= dose.description %></td>
+      <td><%= dose.ingredient %></td>
 </table>
+    <p><%= dose.process %></p>
+    <% end %>
 <br>
   <%= link_to "Back to list /", cocktails_path %>
   <%= link_to 'Leave a review', new_cocktail_review_path(@cocktail) %>
@@ -29,7 +24,7 @@
   <%= link_to "edit Recipe",  new_cocktail_dose_path(@cocktail) %>
   <br>
 
-  <h3>Reviews</h3>
+  <h3>Reviews </h3>
   <% @cocktail.reviews.each do |review| %>
     <p><%= review.content %></p>
   <%= link_to "delete",
