@@ -1,2 +1,67 @@
 // Import page-specific CSS files here.
+.flexbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
 
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.banner {
+  background-image: url(banner_cocktail.jpg);
+  background-size: cover;
+  background-position: center;
+  color: black;
+  padding: 140px 0px;
+}
+
+.banner h1 {
+  color: white;
+  font-size: 65px;
+}
+
+.card_cocktail {
+  overflow: hidden;
+  background: rgb(122, 216, 203);
+  border-radius: 20px;
+  width: 300px;
+  height: 400px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  margin: 20px;
+}
+
+.card_cocktail h3 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card_cocktail p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+.card_cocktail .card_cocktail_info {
+  background-color: rgb(122, 216, 203);
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+.card_cocktail .card_options {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
