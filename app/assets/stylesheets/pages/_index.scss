@@ -1,4 +1,8 @@
 // Import page-specific CSS files here.
+.background {
+  background-color: rgb(103, 212, 234);
+}
+
 .flexbox {
   display: flex;
   justify-content: space-between;
@@ -14,7 +18,7 @@
   background-image: url(banner_cocktail.jpg);
   background-size: cover;
   background-position: center;
-  color: black;
+  color: white;
   padding: 140px 0px;
 }
 
@@ -37,7 +41,7 @@
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  grid-gap: 5px;
   margin: 20px;
 }
 
@@ -45,6 +49,7 @@
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+  color: white;
 }
 
 .card_cocktail p {
@@ -55,6 +60,7 @@
 
 .card_cocktail .card_cocktail_info {
   background-color: rgb(122, 216, 203);
+  color: rgb(10, 69, 89);
   padding: 16px;
   display: flex;
   justify-content: space-between;

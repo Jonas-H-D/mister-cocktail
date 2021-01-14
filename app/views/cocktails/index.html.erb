@@ -1,3 +1,4 @@
+ <div class="background">
   <div class="banner">
     <div class="container">
         <h1>All Cocktails</h1>
@@ -12,7 +13,7 @@
           <div class="card_cocktail_info">
             <div>
               <h2> <%= cocktail.name %> </h2>
-              <p> <%= cocktail.reviews.average(:rating) %></p>
+              <p> <%= cocktail.reviews.average(:rating) %>/5</p>
             </div>
             <div>
         <h3 class="card_options"> <%= link_to "See more", cocktail_path(cocktail), class: "btn btn-primary" %></h3>
@@ -25,3 +26,4 @@
         </div>
     <% end %>
   </div>
+</div>
