@@ -1,0 +1,26 @@
+.show_cocktail_card {
+  overflow: hidden;
+  background: rgb(122, 216, 203);
+  width: 300px;
+  height: 400px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.show_cocktail_card_info {
+  overflow: hidden;
+  background: white;
+  width: 700px;
+  height: 400px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 0;
+  margin: 20px;
+}

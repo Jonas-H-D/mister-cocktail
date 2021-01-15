@@ -1,39 +1,59 @@
 <div class="container">
-<h1><%= @cocktail.name %> </h1>
-<%= @cocktail.reviews.average(:rating) %>
-<br>
-<table class="table">
-  <tbody>
+  <div class="cards">
+  <div class="show_cocktail_card">
+    <img src="https://source.unsplash.com/collection/1990254" style="width: 100%; height: 60%;">
+    <h1><%= @cocktail.name %> </h1>
+        <%= @cocktail.reviews.average(:rating) %>
+      <div>
+    <%= link_to "Back to list ", cocktails_path, class: "btn btn-success" %>
+    <%= link_to 'Leave a review', new_cocktail_review_path(@cocktail), class: "btn btn-success" %>
+      </div>
+  </div>
+
+<div class="show_cocktail_card_info">
+  <table class="table">
     <thead>
       <th>Ingredients</th>
-    <h1><% @cocktail.doses.each do |dose| %> </h1>
+    </thead>
+    <tbody>
+    <% @cocktail.doses.each do |dose| %>
       <td><%= dose.description %></td>
       <td><%= dose.ingredient %></td>
-</table>
-    <p><%= dose.process %></p>
+    </tbody>
+  </table>
+  <table class="table">
+    <thead>
+      <th>Steps</th>
+    </thead>
+    <tbody>
+    <td><%= dose.process %></td>
     <% end %>
-<br>
-  <%= link_to "Back to list /", cocktails_path %>
-  <%= link_to 'Leave a review', new_cocktail_review_path(@cocktail) %>
-  <br>
-  <%= link_to "delete /",
-  cocktail_path(@cocktail),
-  method: :delete %>
-  <%= link_to "edit name/",
+  </tbody>
+  </table>
+  <div>
+  <%= link_to "edit name",
   edit_cocktail_path(@cocktail) %>
   <%= link_to "edit Recipe",  new_cocktail_dose_path(@cocktail) %>
-  <br>
-
-  <h3>Reviews </h3>
-  <% @cocktail.reviews.each do |review| %>
-    <p><%= review.content %></p>
   <%= link_to "delete",
-      review_path(review),
-    method: :delete,
-    data: { confirm: "are you sure?"} %>
-  <% end %>
-</ul>
-<br>
+  cocktail_path(@cocktail),
+  method: :delete %>
+  </div>
+</div>
+</div>
 
+<table class="table">
+    <thead>
+      <th>Reviews</th>
+    </thead>
+    <tbody>
+    <% @cocktail.reviews.each do |review| %>
+      <td><%= review.content %></td>
+      <td><%= link_to "delete",
+      review_path(review),
+      method: :delete,
+      data: { confirm: "are you sure?"} %></td>
+      <% end %>
+    </tbody>
+</table>
 </div>
 
