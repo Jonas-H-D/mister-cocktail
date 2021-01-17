@@ -1,11 +1,22 @@
 .show_cocktail_card {
   overflow: hidden;
-  background: rgb(122, 216, 203);
+  background: black;
+  color: white;
   width: 300px;
   height: 400px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin-top: 50px;
   margin-bottom: 50px;
+}
+
+.cock_name {
+  width: 50px;
+  margin: 6 auto;
+}
+
+.cock_rating {
+  width: 50px;
+  margin: 6 auto;
 }
 
 .show_cocktail_card_info {
@@ -23,4 +34,20 @@
   grid-template-columns: 1fr 1fr;
   grid-gap: 0;
   margin: 20px;
+}
+
+.btn-card {
+  background-color: white;
+  color: black;
+  border-radius: 15px;
+  border: 15px;
+  padding: 10px;
+  font-size: 15px;
+  transition: opacity 0.3s ease;
+  }
+
+.btn-card:hover {
+  opacity: 1;
+  text-decoration: none;
+
 }
