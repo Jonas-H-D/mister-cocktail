@@ -6,25 +6,83 @@
   padding: 60px 0px;
 }
 
+.banner-review {
+  background-image: url("review.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 60px 0px;
+}
+
+.banner-edit {
+  background-image: url("edit.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 60px 0px;
+  height: 1000px;
+}
+
+.banner-top {
+  background-image: url("dragon.jpg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 60px 0px;
+}
+
+.edit-size {
+  width: 500px;
+}
+
 .title-show {
   text-align: center;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .container h1 {
   color: black
 }
 
-.container p {
+.container h2 {
   color: black
 }
 
+.container p {
+  color: black;
+  font-size: 20px;
+}
+
+.glass-effect {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  backdrop-filter: blur(5px) saturate(100%) contrast(85%) brightness(130%);
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.new-size {
+  width: 500px;
+}
+
+.review-size {
+  width: 700px;
+}
+
+
 .table {
   margin-top: 30px;
+  margin-left: 50px;
+  margin-right: 40px;
+  width: 90%;
 }
 
 .links-show {
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .show_cocktail_card_info {

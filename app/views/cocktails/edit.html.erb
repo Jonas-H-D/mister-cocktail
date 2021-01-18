@@ -1,8 +1,14 @@
-<div class="container">
-<%= form_for @cocktail do |f| %>
-  <%= f.label :name, "enter a name" %>
-  <%= f.text_field :name %>
-
-  <%= f.submit %>
-  <% end %>
+<div class="background">
+  <div class="banner-edit">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center form-new">
+        <h3>Update cocktail name</h3>
+        <div class="edit-size justify-content-between align-items-center">
+        <%= form_for @cocktail do |f| %>
+          <%= f.text_field :name %>
+          <%= f.submit class: "btn btn-primary" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>

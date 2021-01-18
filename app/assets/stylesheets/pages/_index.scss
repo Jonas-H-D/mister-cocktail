@@ -4,11 +4,20 @@
 }
 
 .title {
-  width: 30px;
+  width: 40px;
   margin: 5 auto;
 }
 
+.fa-star {
+  color: yellow;
+}
+
 .container_cards {
+  margin-right: 40px;
+  margin-left: 40px;
+  }
+
+.container-top {
   margin-right: 40px;
   margin-left: 40px;
   }
@@ -36,7 +45,15 @@
   padding: 140px 0px;
 }
 
-.banner h1 {
+.banner-new {
+  background-image: url(new.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 140px 0px;
+}
+
+.color h1 {
   color: white;
   font-size: 65px;
 }
@@ -51,6 +68,12 @@
 }
 
 .cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.cards-top {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 10px;
@@ -79,6 +102,11 @@
   position: relative;
 }
 .card_cocktail .card_options {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.card_cocktail .card_options_top {
   margin-right: 20px;
   margin-bottom: 20px;
 }

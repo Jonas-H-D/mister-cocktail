@@ -2,7 +2,7 @@
     <div class="container title-show">
         <h1><%= @cocktail.name %> </h1>
         <div>
-          <p><%= @cocktail.reviews.average(:rating) %></p>
+          <p><%= @cocktail.reviews.average(:rating).floor %> <i class="fas fa-star"></i></p>
         </div>
       </div>
         <div class="title-show">
@@ -11,25 +11,30 @@
         </div>
 
 <div class="container">
-  <div>
-  <table class="table">
+  <div class="glass-effect">
+  <table class="table table-striped table-sm">
     <thead>
-      <th>Ingredients</th>
+      <h2> Ingredients</h2>
     </thead>
     <tbody>
     <% @cocktail.doses.each do |dose| %>
+    <tr>
       <td><%= dose.description %></td>
       <td><%= dose.ingredient %></td>
+    </tr>
     <% end %>
     </tbody>
   </table>
   </div>
-<div>
+
+<div class="glass-effect">
+  <th><h2>Steps to follow</th></h2>
     <% @cocktail.doses.each do |dose| %>
       <p> <%= dose.process %> </p>
     <% end %>
 </div>
-  <div class="links-show title-show">
+
+<div class="links-show title-show">
   <%= link_to "edit name",
   edit_cocktail_path(@cocktail), class: "btn-card" %>
   <%= link_to "edit Recipe",
@@ -39,9 +44,10 @@
   method: :delete, class: "btn-card" %>
 </div>
 
-<table class="table">
+<div class="glass-effect">
+<table class="table table-sm">
     <thead>
-      <th>Reviews</th>
+      <h2>Reviews</h2>
     </thead>
     <tbody>
     <% @cocktail.reviews.each do |review| %>
@@ -54,6 +60,7 @@
     </tbody>
     <% end %>
 </table>
+</div>
 </div>
 </div>
 </div>

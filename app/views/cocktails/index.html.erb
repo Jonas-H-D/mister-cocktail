@@ -16,7 +16,8 @@
           <div class="card_cocktail_info">
             <div class="title">
               <h2> <%= cocktail.name %> </h2>
-              <p > <%= cocktail.reviews.average(:rating) %>/5</p>
+              <% cock = cocktail.reviews.average(:rating) %>
+              <%= cock.to_i%> <i class="fas fa-star"></i>
             </div>
             <div>
         <h3 class="card_options"> <%= link_to "See more", cocktail_path(cocktail), class: "btn btn-link" %></h3>

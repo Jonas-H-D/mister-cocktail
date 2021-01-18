@@ -1,8 +1,14 @@
-<div class="container">
-<h1>Create a New Cocktail</h1>
-<%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name %>
-  <%= f.button :submit, class: 'btn btn-primary' %>
-  <%= link_to "Back to list", cocktails_path, class: 'btn btn-primary' %>
-<% end %>
+<div class="background">
+  <div class="banner-new">
+    <div class="container">
+      <div class="d-flex justify-content-between align-items-center form-new">
+        <h1>Create a New Cocktail</h1>
+        <%= simple_form_for @cocktail do |f| %>
+        <%= f.input :name %>
+        <%= f.button :submit, class: 'btn btn-primary' %>
+        <%= link_to "Back to list", cocktails_path, class: 'btn btn-primary' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
