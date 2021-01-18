@@ -3,7 +3,12 @@
   background-size: cover;
   background-position: center;
   color: white;
-  padding: 140px 0px;
+  padding: 60px 0px;
+}
+
+.title-show {
+  text-align: center;
+  font-size: 40px;
 }
 
 .container h1 {
@@ -12,6 +17,14 @@
 
 .container p {
   color: black
+}
+
+.table {
+  margin-top: 30px;
+}
+
+.links-show {
+  margin-top: 30px;
 }
 
 .show_cocktail_card_info {

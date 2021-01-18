@@ -1,16 +1,17 @@
 <div class="banner-show">
-    <div class="container">
+    <div class="container title-show">
         <h1><%= @cocktail.name %> </h1>
         <div>
           <p><%= @cocktail.reviews.average(:rating) %></p>
         </div>
-        <div>
+      </div>
+        <div class="title-show">
         <%= link_to "Back to list ", cocktails_path, class: "btn-card" %>
         <%= link_to 'Leave a review', new_cocktail_review_path(@cocktail), class: "btn-card" %>
         </div>
-  </div>
+
 <div class="container">
-  <div class="show_cocktail_card_info">
+  <div>
   <table class="table">
     <thead>
       <th>Ingredients</th>
@@ -19,20 +20,16 @@
     <% @cocktail.doses.each do |dose| %>
       <td><%= dose.description %></td>
       <td><%= dose.ingredient %></td>
+    <% end %>
     </tbody>
   </table>
-  <table class="table">
-    <thead>
-      <th>Steps</th>
-    </thead>
-    <tbody>
-    <td><%= dose.process %></td>
-    <% end %>
-  </tbody>
-  </table>
   </div>
-
-  <div>
+<div>
+    <% @cocktail.doses.each do |dose| %>
+      <p> <%= dose.process %> </p>
+    <% end %>
+</div>
+  <div class="links-show title-show">
   <%= link_to "edit name",
   edit_cocktail_path(@cocktail), class: "btn-card" %>
   <%= link_to "edit Recipe",
@@ -57,5 +54,6 @@
     </tbody>
     <% end %>
 </table>
+</div>
 </div>
 </div>
